@@ -9,6 +9,7 @@ type XRPLClient struct {
 	Account
 	Server
 	Ledger
+	Transactions
 }
 
 type XRPLRequest interface {
@@ -28,10 +29,11 @@ type XRPLResponseWarning struct {
 
 func NewXRPLClient(cl Client) *XRPLClient {
 	return &XRPLClient{
-		client:  cl,
-		Account: &accountImpl{client: cl},
-		Server:  &serverImpl{client: cl},
-		Ledger:  &ledgerImpl{client: cl},
+		client:       cl,
+		Account:      &accountImpl{client: cl},
+		Server:       &serverImpl{client: cl},
+		Ledger:       &ledgerImpl{client: cl},
+		Transactions: &transactionsImpl{client: cl},
 	}
 }
 

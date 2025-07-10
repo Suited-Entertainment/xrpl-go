@@ -1,8 +1,11 @@
 package jsonrpcmodels
 
 import (
-	"github.com/mitchellh/mapstructure"
+	"encoding/json"
+	"fmt"
+
 	"github.com/Suited-Entertainment/xrpl-go/client"
+	"github.com/mitchellh/mapstructure"
 )
 
 type JsonRpcResponse struct {
@@ -27,9 +30,20 @@ func (r JsonRpcResponse) GetResult(v any) error {
 	if err != nil {
 		return err
 	}
+
 	err = dec.Decode(r.Result)
 	if err != nil {
-		return err
+		// Use json decoding if mapstructure decoding fails
+		data, jsonErr := json.Marshal(r.Result)
+		if jsonErr != nil {
+			return fmt.Errorf("%w; %w", err, jsonErr)
+		}
+
+		jsonErr = json.Unmarshal(data, &v)
+		if jsonErr != nil {
+			return fmt.Errorf("%w; %w", err, jsonErr)
+		}
+		return nil
 	}
 	return nil
 }
