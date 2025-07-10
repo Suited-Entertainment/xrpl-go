@@ -8,6 +8,7 @@ type XRPLClient struct {
 	client Client
 	Account
 	Server
+	Ledger
 }
 
 type XRPLRequest interface {
@@ -30,9 +31,27 @@ func NewXRPLClient(cl Client) *XRPLClient {
 		client:  cl,
 		Account: &accountImpl{client: cl},
 		Server:  &serverImpl{client: cl},
+		Ledger:  &ledgerImpl{client: cl},
 	}
 }
 
 func (c *XRPLClient) Client() Client {
 	return c.client
+}
+
+type ClientHaver interface {
+	Client() Client
+}
+
+func defaultCall[Req XRPLRequest, Res any](c ClientHaver, req Req) (*Res, XRPLResponse, error) {
+	res, err := c.Client().SendRequest(req)
+	if err != nil {
+		return nil, nil, err
+	}
+	var acr Res
+	err = res.GetResult(&acr)
+	if err != nil {
+		return nil, nil, err
+	}
+	return &acr, res, nil
 }

@@ -12,18 +12,10 @@ type serverImpl struct {
 }
 
 var _ Server = &serverImpl{}
+var _ ClientHaver = &serverImpl{}
 
-func defaultCall[Req XRPLRequest, Res any](s *serverImpl, req Req) (*Res, XRPLResponse, error) {
-	res, err := s.client.SendRequest(req)
-	if err != nil {
-		return nil, nil, err
-	}
-	var acr Res
-	err = res.GetResult(&acr)
-	if err != nil {
-		return nil, nil, err
-	}
-	return &acr, res, nil
+func (s *serverImpl) Client() Client {
+	return s.client
 }
 
 func (s *serverImpl) GetServerInfo(req *server.ServerInfoRequest) (*server.ServerInfoResponse, XRPLResponse, error) {
