@@ -1,6 +1,6 @@
 package server
 
-import "github.com/xyield/xrpl-go/model/transactions/types"
+import "github.com/Suited-Entertainment/xrpl-go/model/transactions/types"
 
 type ServerInfoResponse struct {
 	Info ServerInfo `json:"info"`

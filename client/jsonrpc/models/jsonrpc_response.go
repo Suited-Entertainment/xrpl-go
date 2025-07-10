@@ -2,7 +2,7 @@ package jsonrpcmodels
 
 import (
 	"github.com/mitchellh/mapstructure"
-	"github.com/xyield/xrpl-go/client"
+	"github.com/Suited-Entertainment/xrpl-go/client"
 )
 
 type JsonRpcResponse struct {

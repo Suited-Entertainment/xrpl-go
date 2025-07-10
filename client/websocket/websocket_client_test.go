@@ -6,9 +6,9 @@ import (
 
 	"github.com/gorilla/websocket"
 	"github.com/stretchr/testify/require"
-	"github.com/xyield/xrpl-go/client"
-	"github.com/xyield/xrpl-go/model/client/account"
-	"github.com/xyield/xrpl-go/test"
+	"github.com/Suited-Entertainment/xrpl-go/client"
+	"github.com/Suited-Entertainment/xrpl-go/model/client/account"
+	"github.com/Suited-Entertainment/xrpl-go/test"
 )
 
 func TestSendRequest(t *testing.T) {

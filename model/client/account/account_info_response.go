@@ -1,8 +1,8 @@
 package account
 
 import (
-	"github.com/xyield/xrpl-go/model/client/common"
-	"github.com/xyield/xrpl-go/model/ledger"
+	"github.com/Suited-Entertainment/xrpl-go/model/client/common"
+	"github.com/Suited-Entertainment/xrpl-go/model/ledger"
 )
 
 type AccountInfoResponse struct {

@@ -3,9 +3,9 @@ package path
 import (
 	"testing"
 
-	"github.com/xyield/xrpl-go/model/transactions"
-	"github.com/xyield/xrpl-go/model/transactions/types"
-	"github.com/xyield/xrpl-go/test"
+	"github.com/Suited-Entertainment/xrpl-go/model/transactions"
+	"github.com/Suited-Entertainment/xrpl-go/model/transactions/types"
+	"github.com/Suited-Entertainment/xrpl-go/test"
 )
 
 func TestRipplePathFindRequest(t *testing.T) {

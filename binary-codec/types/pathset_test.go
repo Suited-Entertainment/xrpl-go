@@ -4,7 +4,7 @@ import (
 	"testing"
 
 	"github.com/stretchr/testify/require"
-	"github.com/xyield/xrpl-go/binary-codec/serdes"
+	"github.com/Suited-Entertainment/xrpl-go/binary-codec/serdes"
 )
 
 func TestIsPathStep(t *testing.T) {

@@ -4,8 +4,8 @@ import (
 	"encoding/json"
 	"errors"
 
-	"github.com/xyield/xrpl-go/model/client/common"
-	"github.com/xyield/xrpl-go/model/transactions/types"
+	"github.com/Suited-Entertainment/xrpl-go/model/client/common"
+	"github.com/Suited-Entertainment/xrpl-go/model/transactions/types"
 )
 
 type AccountChannelsRequest struct {

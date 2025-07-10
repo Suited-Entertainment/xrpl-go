@@ -4,7 +4,7 @@ import (
 	"testing"
 
 	"github.com/stretchr/testify/require"
-	addresscodec "github.com/xyield/xrpl-go/address-codec"
+	addresscodec "github.com/Suited-Entertainment/xrpl-go/address-codec"
 )
 
 func TestED25519DeriveKeypair(t *testing.T) {

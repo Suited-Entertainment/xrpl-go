@@ -1,6 +1,6 @@
 package key
 
-import "github.com/xyield/xrpl-go/model/transactions/types"
+import "github.com/Suited-Entertainment/xrpl-go/model/transactions/types"
 
 type WalletProposeResponse struct {
 	KeyType       string        `json:"key_type"`

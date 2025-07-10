@@ -1,6 +1,6 @@
 package channel
 
-import "github.com/xyield/xrpl-go/model/transactions/types"
+import "github.com/Suited-Entertainment/xrpl-go/model/transactions/types"
 
 type ChannelVerifyRequest struct {
 	Amount    types.XRPCurrencyAmount `json:"amount"`

@@ -3,9 +3,9 @@ package path
 import (
 	"testing"
 
-	"github.com/xyield/xrpl-go/model/client/common"
-	"github.com/xyield/xrpl-go/model/transactions/types"
-	"github.com/xyield/xrpl-go/test"
+	"github.com/Suited-Entertainment/xrpl-go/model/client/common"
+	"github.com/Suited-Entertainment/xrpl-go/model/transactions/types"
+	"github.com/Suited-Entertainment/xrpl-go/test"
 )
 
 func TestNFTokenSellOffersRequest(t *testing.T) {

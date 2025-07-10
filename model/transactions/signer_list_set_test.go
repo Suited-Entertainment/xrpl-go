@@ -5,9 +5,9 @@ import (
 	"reflect"
 	"testing"
 
-	"github.com/xyield/xrpl-go/model/ledger"
-	"github.com/xyield/xrpl-go/model/transactions/types"
-	"github.com/xyield/xrpl-go/test"
+	"github.com/Suited-Entertainment/xrpl-go/model/ledger"
+	"github.com/Suited-Entertainment/xrpl-go/model/transactions/types"
+	"github.com/Suited-Entertainment/xrpl-go/test"
 )
 
 func TestSignerListSetTx(t *testing.T) {

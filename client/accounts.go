@@ -1,7 +1,7 @@
 package client
 
 import (
-	"github.com/xyield/xrpl-go/model/client/account"
+	"github.com/Suited-Entertainment/xrpl-go/model/client/account"
 )
 
 type Account interface {

@@ -3,9 +3,9 @@ package path
 import (
 	"encoding/json"
 
-	"github.com/xyield/xrpl-go/model/client/common"
-	"github.com/xyield/xrpl-go/model/ledger"
-	"github.com/xyield/xrpl-go/model/transactions/types"
+	"github.com/Suited-Entertainment/xrpl-go/model/client/common"
+	"github.com/Suited-Entertainment/xrpl-go/model/ledger"
+	"github.com/Suited-Entertainment/xrpl-go/model/transactions/types"
 )
 
 type BookOffersResponse struct {

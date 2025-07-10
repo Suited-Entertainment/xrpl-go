@@ -4,7 +4,7 @@ import (
 	"crypto/rand"
 	"fmt"
 
-	addresscodec "github.com/xyield/xrpl-go/address-codec"
+	addresscodec "github.com/Suited-Entertainment/xrpl-go/address-codec"
 )
 
 var r randomizer

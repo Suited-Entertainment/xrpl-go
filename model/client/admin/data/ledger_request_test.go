@@ -3,9 +3,9 @@ package data
 import (
 	"testing"
 
-	"github.com/xyield/xrpl-go/model/client/ledger"
-	"github.com/xyield/xrpl-go/model/transactions/types"
-	"github.com/xyield/xrpl-go/test"
+	"github.com/Suited-Entertainment/xrpl-go/model/client/ledger"
+	"github.com/Suited-Entertainment/xrpl-go/model/transactions/types"
+	"github.com/Suited-Entertainment/xrpl-go/test"
 )
 
 func TestLedgerRequestRequest(t *testing.T) {

@@ -3,7 +3,7 @@ package serdes
 import (
 	"encoding/hex"
 
-	"github.com/xyield/xrpl-go/binary-codec/definitions"
+	"github.com/Suited-Entertainment/xrpl-go/binary-codec/definitions"
 )
 
 // Returns the unique field ID for a given field name.

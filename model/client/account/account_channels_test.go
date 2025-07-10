@@ -4,8 +4,8 @@ import (
 	"testing"
 
 	"github.com/stretchr/testify/assert"
-	"github.com/xyield/xrpl-go/model/client/common"
-	"github.com/xyield/xrpl-go/test"
+	"github.com/Suited-Entertainment/xrpl-go/model/client/common"
+	"github.com/Suited-Entertainment/xrpl-go/test"
 )
 
 func TestAccountChannelRequest(t *testing.T) {

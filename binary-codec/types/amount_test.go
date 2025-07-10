@@ -4,7 +4,7 @@ import (
 	"testing"
 
 	"github.com/stretchr/testify/require"
-	bigdecimal "github.com/xyield/xrpl-go/pkg/big-decimal"
+	bigdecimal "github.com/Suited-Entertainment/xrpl-go/pkg/big-decimal"
 )
 
 func TestVerifyXrpValue(t *testing.T) {

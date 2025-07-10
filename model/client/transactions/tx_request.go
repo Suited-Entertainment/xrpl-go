@@ -1,6 +1,6 @@
 package transactions
 
-import "github.com/xyield/xrpl-go/model/client/common"
+import "github.com/Suited-Entertainment/xrpl-go/model/client/common"
 
 type TxRequest struct {
 	Transaction string             `json:"transaction"`

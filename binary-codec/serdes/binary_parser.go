@@ -3,7 +3,7 @@ package serdes
 import (
 	"errors"
 
-	"github.com/xyield/xrpl-go/binary-codec/definitions"
+	"github.com/Suited-Entertainment/xrpl-go/binary-codec/definitions"
 )
 
 var (

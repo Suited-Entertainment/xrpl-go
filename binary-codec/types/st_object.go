@@ -4,8 +4,8 @@ import (
 	"fmt"
 	"sort"
 
-	"github.com/xyield/xrpl-go/binary-codec/definitions"
-	"github.com/xyield/xrpl-go/binary-codec/serdes"
+	"github.com/Suited-Entertainment/xrpl-go/binary-codec/definitions"
+	"github.com/Suited-Entertainment/xrpl-go/binary-codec/serdes"
 )
 
 // STObject represents a map of serialized field instances, where each key is a field name

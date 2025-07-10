@@ -7,7 +7,7 @@ import (
 	"sync/atomic"
 
 	"github.com/gorilla/websocket"
-	"github.com/xyield/xrpl-go/client"
+	"github.com/Suited-Entertainment/xrpl-go/client"
 )
 
 var _ client.Client = (*WebsocketClient)(nil)

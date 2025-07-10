@@ -3,7 +3,7 @@ package transactions
 import (
 	"encoding/json"
 
-	"github.com/xyield/xrpl-go/model/client/common"
+	"github.com/Suited-Entertainment/xrpl-go/model/client/common"
 )
 
 type TransactionEntryRequest struct {

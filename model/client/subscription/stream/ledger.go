@@ -1,6 +1,6 @@
 package stream
 
-import "github.com/xyield/xrpl-go/model/client/common"
+import "github.com/Suited-Entertainment/xrpl-go/model/client/common"
 
 type LedgerStream struct {
 	Type             StreamType         `json:"type"`

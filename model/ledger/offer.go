@@ -3,7 +3,7 @@ package ledger
 import (
 	"encoding/json"
 
-	"github.com/xyield/xrpl-go/model/transactions/types"
+	"github.com/Suited-Entertainment/xrpl-go/model/transactions/types"
 )
 
 type OfferFlags uint

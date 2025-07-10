@@ -3,7 +3,7 @@ package transactions
 import (
 	"encoding/json"
 
-	"github.com/xyield/xrpl-go/model/transactions"
+	"github.com/Suited-Entertainment/xrpl-go/model/transactions"
 )
 
 type SubmitMultisignedRequest struct {

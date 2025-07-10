@@ -1,6 +1,6 @@
 package account
 
-import "github.com/xyield/xrpl-go/model/transactions/types"
+import "github.com/Suited-Entertainment/xrpl-go/model/transactions/types"
 
 type QueueData struct {
 	TxnCount           uint64                  `json:"txn_count"`

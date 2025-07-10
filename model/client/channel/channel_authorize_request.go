@@ -3,7 +3,7 @@ package channel
 import (
 	"fmt"
 
-	"github.com/xyield/xrpl-go/model/transactions/types"
+	"github.com/Suited-Entertainment/xrpl-go/model/transactions/types"
 )
 
 type ChannelAuthorizeRequest struct {

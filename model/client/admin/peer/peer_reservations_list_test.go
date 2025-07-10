@@ -3,7 +3,7 @@ package peer
 import (
 	"testing"
 
-	"github.com/xyield/xrpl-go/test"
+	"github.com/Suited-Entertainment/xrpl-go/test"
 )
 
 func TestPeerReservationsListResponse(t *testing.T) {

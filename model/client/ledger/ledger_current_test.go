@@ -3,7 +3,7 @@ package ledger
 import (
 	"testing"
 
-	"github.com/xyield/xrpl-go/test"
+	"github.com/Suited-Entertainment/xrpl-go/test"
 )
 
 // Ledger Current request has no fields to test

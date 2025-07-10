@@ -1,8 +1,8 @@
 package types
 
 import (
-	addresscodec "github.com/xyield/xrpl-go/address-codec"
-	"github.com/xyield/xrpl-go/binary-codec/serdes"
+	addresscodec "github.com/Suited-Entertainment/xrpl-go/address-codec"
+	"github.com/Suited-Entertainment/xrpl-go/binary-codec/serdes"
 )
 
 // AccountID struct represents an account ID.

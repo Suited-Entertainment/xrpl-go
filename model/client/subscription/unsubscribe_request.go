@@ -1,6 +1,6 @@
 package subscribe
 
-import "github.com/xyield/xrpl-go/model/transactions/types"
+import "github.com/Suited-Entertainment/xrpl-go/model/transactions/types"
 
 type UnsubscribeRequest struct {
 	Streams          []string               `json:"streams,omitempty"`
