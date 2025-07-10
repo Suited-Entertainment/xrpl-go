@@ -5,8 +5,9 @@ type Client interface {
 }
 
 type XRPLClient struct {
-	client  Client
-	Account Account
+	client Client
+	Account
+	Server
 }
 
 type XRPLRequest interface {
@@ -28,6 +29,7 @@ func NewXRPLClient(cl Client) *XRPLClient {
 	return &XRPLClient{
 		client:  cl,
 		Account: &accountImpl{client: cl},
+		Server:  &serverImpl{client: cl},
 	}
 }
 
