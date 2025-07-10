@@ -11,9 +11,9 @@ import (
 	"strings"
 	"time"
 
-	jsoniter "github.com/json-iterator/go"
 	"github.com/Suited-Entertainment/xrpl-go/client"
 	jsonrpcmodels "github.com/Suited-Entertainment/xrpl-go/client/jsonrpc/models"
+	jsoniter "github.com/json-iterator/go"
 )
 
 type JsonRpcClient struct {

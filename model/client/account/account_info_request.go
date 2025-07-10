@@ -12,8 +12,7 @@ type AccountInfoRequest struct {
 	LedgerIndex common.LedgerSpecifier `json:"ledger_index,omitempty"`
 	LedgerHash  common.LedgerHash      `json:"ledger_hash,omitempty"`
 	Queue       bool                   `json:"queue,omitempty"`
-	SignerList  bool                   `json:"signer_list,omitempty"`
-	Strict      bool                   `json:"strict,omitempty"`
+	SignerList  bool                   `json:"signer_lists,omitempty"`
 }
 
 func (*AccountInfoRequest) Method() string {
@@ -31,7 +30,6 @@ func (r *AccountInfoRequest) UnmarshalJSON(data []byte) error {
 		LedgerHash  common.LedgerHash `json:"ledger_hash,omitempty"`
 		Queue       bool              `json:"queue,omitempty"`
 		SignerList  bool              `json:"signer_list,omitempty"`
-		Strict      bool              `json:"strict,omitempty"`
 	}
 	var h airHelper
 	if err := json.Unmarshal(data, &h); err != nil {
@@ -42,7 +40,6 @@ func (r *AccountInfoRequest) UnmarshalJSON(data []byte) error {
 		LedgerHash: h.LedgerHash,
 		Queue:      h.Queue,
 		SignerList: h.SignerList,
-		Strict:     h.Strict,
 	}
 
 	i, err := common.UnmarshalLedgerSpecifier(h.LedgerIndex)
