@@ -4,7 +4,6 @@ import (
 	"errors"
 	"net/http"
 	"strings"
-	"time"
 )
 
 var ErrEmptyUrl = errors.New("empty port and IP provided")
@@ -39,7 +38,7 @@ func NewJsonRpcConfig(url string, opts ...JsonRpcConfigOpt) (*JsonRpcConfig, err
 	}
 
 	cfg := &JsonRpcConfig{
-		HTTPClient: &http.Client{Timeout: time.Duration(1) * time.Second}, // default timeout value - allow custom timme out?
+		HTTPClient: &http.Client{},
 		Url:        url,
 		Headers: map[string][]string{
 			"Content-Type": {"application/json"},

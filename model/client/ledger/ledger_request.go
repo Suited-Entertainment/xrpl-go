@@ -11,6 +11,7 @@ type LedgerRequest struct {
 	LedgerHash   common.LedgerHash      `json:"ledger_hash,omitempty"`
 	LedgerIndex  common.LedgerSpecifier `json:"ledger_index,omitempty"`
 	Full         bool                   `json:"full,omitempty"`
+	Expand       bool                   `json:"expand,omitempty"`
 	Accounts     bool                   `json:"accounts,omitempty"`
 	Transactions bool                   `json:"transactions,omitempty"`
 	OwnerFunds   bool                   `json:"owner_funds,omitempty"`
@@ -32,6 +33,7 @@ func (r *LedgerRequest) UnmarshalJSON(data []byte) error {
 		LedgerHash   common.LedgerHash      `json:"ledger_hash,omitempty"`
 		LedgerIndex  json.RawMessage        `json:"ledger_index,omitempty"`
 		Full         bool                   `json:"full,omitempty"`
+		Expand       bool                   `json:"expand,omitempty"`
 		Accounts     bool                   `json:"accounts,omitempty"`
 		Transactions bool                   `json:"transactions,omitempty"`
 		OwnerFunds   bool                   `json:"owner_funds,omitempty"`
@@ -46,6 +48,7 @@ func (r *LedgerRequest) UnmarshalJSON(data []byte) error {
 	*r = LedgerRequest{
 		LedgerHash:   h.LedgerHash,
 		Full:         h.Full,
+		Expand:       h.Expand,
 		Accounts:     h.Accounts,
 		Transactions: h.Transactions,
 		OwnerFunds:   h.OwnerFunds,

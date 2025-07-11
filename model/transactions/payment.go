@@ -11,7 +11,7 @@ type Payment struct {
 	Amount         types.CurrencyAmount
 	Destination    types.Address
 	DestinationTag uint                 `json:",omitempty"`
-	InvoiceID      uint                 `json:",omitempty"`
+	InvoiceID      string               `json:",omitempty"`
 	Paths          [][]PathStep         `json:",omitempty"`
 	SendMax        types.CurrencyAmount `json:",omitempty"`
 	DeliverMin     types.CurrencyAmount `json:",omitempty"`
@@ -27,7 +27,7 @@ func (p *Payment) UnmarshalJSON(data []byte) error {
 		Amount         json.RawMessage
 		Destination    types.Address
 		DestinationTag uint            `json:",omitempty"`
-		InvoiceID      uint            `json:",omitempty"`
+		InvoiceID      string          `json:",omitempty"`
 		Paths          [][]PathStep    `json:",omitempty"`
 		SendMax        json.RawMessage `json:",omitempty"`
 		DeliverMin     json.RawMessage `json:",omitempty"`

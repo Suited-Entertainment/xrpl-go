@@ -120,5 +120,4 @@ func UnmarshalLedgerObject(data []byte) (LedgerObject, error) {
 		return nil, err
 	}
 	return o, nil
-
 }
