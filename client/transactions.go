@@ -6,6 +6,7 @@ import (
 
 type Transactions interface {
 	GetTx(req *transactions.TxRequest) (*transactions.TxResponse, XRPLResponse, error)
+	SubmitTx(req *transactions.SubmitRequest) (*transactions.SubmitResponse, XRPLResponse, error)
 }
 
 type transactionsImpl struct {
@@ -21,4 +22,8 @@ func (t *transactionsImpl) Client() Client {
 
 func (t *transactionsImpl) GetTx(req *transactions.TxRequest) (*transactions.TxResponse, XRPLResponse, error) {
 	return defaultCall[*transactions.TxRequest, transactions.TxResponse](t, req)
+}
+
+func (t *transactionsImpl) SubmitTx(req *transactions.SubmitRequest) (*transactions.SubmitResponse, XRPLResponse, error) {
+	return defaultCall[*transactions.SubmitRequest, transactions.SubmitResponse](t, req)
 }
