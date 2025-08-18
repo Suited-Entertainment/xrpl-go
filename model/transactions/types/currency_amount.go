@@ -5,6 +5,8 @@ import (
 	"strconv"
 )
 
+type Amount CurrencyAmount
+
 type CurrencyKind int
 
 const (
