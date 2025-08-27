@@ -10,7 +10,7 @@ type Payment struct {
 	BaseTx
 	Amount         types.CurrencyAmount
 	Destination    types.Address
-	DestinationTag uint32               `json:",omitempty"`
+	DestinationTag *uint32              `json:",omitempty"`
 	InvoiceID      string               `json:",omitempty"`
 	Paths          [][]PathStep         `json:",omitempty"`
 	SendMax        types.CurrencyAmount `json:",omitempty"`
@@ -26,7 +26,7 @@ func (p *Payment) UnmarshalJSON(data []byte) error {
 		BaseTx
 		Amount         json.RawMessage
 		Destination    types.Address
-		DestinationTag uint32          `json:",omitempty"`
+		DestinationTag *uint32         `json:",omitempty"`
 		InvoiceID      string          `json:",omitempty"`
 		Paths          [][]PathStep    `json:",omitempty"`
 		SendMax        json.RawMessage `json:",omitempty"`

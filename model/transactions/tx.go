@@ -21,7 +21,7 @@ type BaseTx struct {
 	LastLedgerSequence uint32                  `json:",omitempty"`
 	Memos              []MemoWrapper           `json:",omitempty"`
 	Signers            []Signer                `json:",omitempty"`
-	SourceTag          uint32                  `json:",omitempty"`
+	SourceTag          *uint32                 `json:",omitempty"`
 	SigningPubKey      string                  `json:",omitempty"`
 	TicketSequence     uint                    `json:",omitempty"`
 	TxnSignature       string                  `json:",omitempty"`
