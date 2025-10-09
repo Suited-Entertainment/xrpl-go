@@ -429,7 +429,8 @@ func UnmarshalTx(data json.RawMessage) (Tx, error) {
 	case XChainModifyBridgeTx:
 		tx = &XChainModifyBridge{}
 	default:
-		return nil, fmt.Errorf("unsupported transaction type %s", txType.TransactionType)
+		fmt.Printf("[xrpl-go] unsupported transaction type %s\n", txType.TransactionType)
+		tx = &BaseTx{}
 	}
 	if err := json.Unmarshal(data, tx); err != nil {
 		return nil, err
