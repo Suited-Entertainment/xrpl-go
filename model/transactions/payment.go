@@ -31,6 +31,9 @@ func (p *Payment) UnmarshalJSON(data []byte) error {
 		Paths          [][]PathStep    `json:",omitempty"`
 		SendMax        json.RawMessage `json:",omitempty"`
 		DeliverMin     json.RawMessage `json:",omitempty"`
+		Meta           struct {
+			DeliveredAmount json.RawMessage `json:"delivered_amount"`
+		} `json:"meta"`
 	}
 	var h pHelper
 	if err := json.Unmarshal(data, &h); err != nil {
@@ -45,7 +48,11 @@ func (p *Payment) UnmarshalJSON(data []byte) error {
 	}
 	var amount, max, min types.CurrencyAmount
 	var err error
-	amount, err = types.UnmarshalCurrencyAmount(h.Amount)
+	amountToParse := h.Meta.DeliveredAmount
+	if amountToParse == nil {
+		amountToParse = h.Amount
+	}
+	amount, err = types.UnmarshalCurrencyAmount(amountToParse)
 	if err != nil {
 		return err
 	}
