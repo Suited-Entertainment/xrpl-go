@@ -120,16 +120,6 @@ func (*CredentialDelete) TxType() TxType {
 	return CredentialDeleteTx
 }
 
-type Clawback struct {
-	BaseTx
-	Amount types.Amount  `json:"Amount"`
-	Holder types.Address `json:"Holder"`
-}
-
-func (*Clawback) TxType() TxType {
-	return ClawbackTx
-}
-
 type DelegateSet struct {
 	BaseTx
 }
@@ -346,8 +336,6 @@ func UnmarshalTx(data json.RawMessage) (Tx, error) {
 		tx = &CheckCash{}
 	case CheckCreateTx:
 		tx = &CheckCreate{}
-	case ClawbackTx:
-		tx = &Clawback{}
 	case DepositPreauthTx:
 		tx = &DepositPreauth{}
 	case DelegateSetTx:

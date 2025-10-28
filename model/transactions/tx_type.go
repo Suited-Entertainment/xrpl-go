@@ -19,7 +19,6 @@ const (
 	CheckCancelTx                       TxType = "CheckCancel"
 	CheckCashTx                         TxType = "CheckCash"
 	CheckCreateTx                       TxType = "CheckCreate"
-	ClawbackTx                          TxType = "Clawback"
 	DepositPreauthTx                    TxType = "DepositPreauth"
 	DelegateSetTx                       TxType = "DelegateSet"
 	DIDDeleteTx                         TxType = "DIDDelete"
